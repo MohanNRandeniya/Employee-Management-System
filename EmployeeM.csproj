@@ -1,0 +1,431 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{10386E5B-303E-473F-A06F-FDF9DEBB79C3}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EmployeeM</RootNamespace>
+    <AssemblyName>EmployeeM</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.5.3">
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Bunifu Technologies\Bunifu Framework Manager\bin\updates\Bunifu UI 1.5.3\Bunifu_UI_v1.5.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddDetails.Designer.cs">
+      <DependentUpon>AddDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="attForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="attForm.Designer.cs">
+      <DependentUpon>attForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomClasses\conDB.cs" />
+    <Compile Include="CustomClasses\Table.cs" />
+    <Compile Include="CustomClasses\TextAnim.cs" />
+    <Compile Include="CustomClasses\validation.cs" />
+    <Compile Include="CustomClasses\ValidationClass.cs" />
+    <Compile Include="EmailInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmailInfo.Designer.cs">
+      <DependentUpon>EmailInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateDetails.Designer.cs">
+      <DependentUpon>UpdateDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmpDetAtt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmpDetAtt.Designer.cs">
+      <DependentUpon>EmpDetAtt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mainForm.Designer.cs">
+      <DependentUpon>mainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mntForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mntForm.Designer.cs">
+      <DependentUpon>mntForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SetAtt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SetAtt.Designer.cs">
+      <DependentUpon>SetAtt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SetLeave.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SetLeave.Designer.cs">
+      <DependentUpon>SetLeave.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MessageBoxes\SuccessAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MessageBoxes\SuccessAdd.Designer.cs">
+      <DependentUpon>SuccessAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MessageBoxes\SuccessRemove.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MessageBoxes\SuccessRemove.Designer.cs">
+      <DependentUpon>SuccessRemove.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MessageBoxes\SuccessUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MessageBoxes\SuccessUpdate.Designer.cs">
+      <DependentUpon>SuccessUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MessageBoxes\SureMsg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MessageBoxes\SureMsg.Designer.cs">
+      <DependentUpon>SureMsg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MessageBoxes\SureMsg2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MessageBoxes\SureMsg2.Designer.cs">
+      <DependentUpon>SureMsg2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewAbsent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewAbsent.Designer.cs">
+      <DependentUpon>ViewAbsent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewAttendance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewAttendance.Designer.cs">
+      <DependentUpon>ViewAttendance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewPresent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewPresent.Designer.cs">
+      <DependentUpon>ViewPresent.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AddDetails.resx">
+      <DependentUpon>AddDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="attForm.resx">
+      <DependentUpon>attForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmailInfo.resx">
+      <DependentUpon>EmailInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateDetails.resx">
+      <DependentUpon>UpdateDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmpDetAtt.resx">
+      <DependentUpon>EmpDetAtt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mainForm.resx">
+      <DependentUpon>mainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mntForm.resx">
+      <DependentUpon>mntForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="SetAtt.resx">
+      <DependentUpon>SetAtt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SetLeave.resx">
+      <DependentUpon>SetLeave.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MessageBoxes\SuccessAdd.resx">
+      <DependentUpon>SuccessAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MessageBoxes\SuccessRemove.resx">
+      <DependentUpon>SuccessRemove.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MessageBoxes\SuccessUpdate.resx">
+      <DependentUpon>SuccessUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MessageBoxes\SureMsg.resx">
+      <DependentUpon>SureMsg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MessageBoxes\SureMsg2.resx">
+      <DependentUpon>SureMsg2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewAbsent.resx">
+      <DependentUpon>ViewAbsent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewAttendance.resx">
+      <DependentUpon>ViewAttendance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPresent.resx">
+      <DependentUpon>ViewPresent.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\back button100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\back button100select.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\263665.1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\263666.1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\263669.1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\263682.1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Next.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Previous.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrows.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_next_293269.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_prev_293265.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_next_2932691.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_prev_2932651.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_controls_chapter_next_103453.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_controls_chapter_previous_103454.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>7</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Outlook">
+      <Guid>{00062FFF-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>9</VersionMajor>
+      <VersionMinor>5</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="stdole">
+      <Guid>{00020430-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5.5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6.6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\7.7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\absentNormal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\absentSelect.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\addNormal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\addSelected.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\editNormal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\editSelect.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lateAttNormal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lateAttSelect.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\leaveNormal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\leaveSelect.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mailNormal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mailSelect.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\presentNormal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\presentSelect.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\removeNormal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\removeSelected.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\resetNormal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\resetSelect.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\searchNormal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\searchSelect.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\setAttNormal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\setAttSelect.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\viewallattNormal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\viewallattSelect.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\warning.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\warningac.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrowBack.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrowNext.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
